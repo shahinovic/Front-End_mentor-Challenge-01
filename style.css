@@ -1,0 +1,150 @@
+/* vars */
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --p-size: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1440px;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-BG);
+}
+
+.container {
+    background-color: var(--card-BG);
+    padding: 25px;
+    width: 350px;
+    height: fit-content;
+
+    display: flex;
+    border-radius: 15px;
+}
+
+@media (max-width: 375px) {
+    body {
+        width: 100%;
+    }
+
+    .container {
+        width: 85%;
+    }
+}
+
+.container .card {
+    /* border: 1px solid red; */
+}
+
+.container .card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.container .card h2 {
+    margin: 15px 0;
+    color: var(--white);
+
+}
+
+.container .card p {
+    color: var(--soft-blue);
+    font-size: var(--p-size);
+    margin-bottom: 10px;
+}
+
+.container .card .info {
+    margin-bottom: 10px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.container .card .info span {
+    position: relative;
+    padding-left: 20px;
+}
+
+.container .card .info span:nth-child(1) {
+    color: var(--Cyan);
+    font-weight: 600;
+}
+
+.container .card .info span:nth-child(2) {
+    color: var(--soft-blue);
+}
+
+.container .card .info span svg {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+
+hr {
+    color: var(--line);
+}
+
+.container .card .avatar {
+    margin: 15px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.container .card .avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.container .card .avatar p {
+    display: inline-block;
+    padding: 5px 0 0 15px;
+}
+
+.container .card .avatar p span {
+    color: var(--white)
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    background-color: var(--card-BG);
+    place-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .attribution {
+    font-size: 15px;
+}
+
+footer .attribution a:nth-child(2) {
+    color: var(--Cyan);
+    text-decoration: none;
+}
+
+@media (max-width: 375px) {
+    footer .attribution {
+        font-size: 0.8em;
+    }
+}
